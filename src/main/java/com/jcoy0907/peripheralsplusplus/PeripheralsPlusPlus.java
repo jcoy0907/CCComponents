@@ -7,7 +7,6 @@ import com.austinv11.collectiveframework.minecraft.reference.ModIds;
 import com.austinv11.collectiveframework.multithreading.SimpleRunnable;
 import com.jcoy0907.peripheralsplusplus.client.gui.GuiHandler;
 import com.jcoy0907.peripheralsplusplus.creativetab.CreativeTabPPP;
-import com.jcoy0907.peripheralsplusplus.entities.EntityNanoBotSwarm;
 import com.jcoy0907.peripheralsplusplus.entities.EntityRidableTurtle;
 import com.jcoy0907.peripheralsplusplus.hooks.ComputerCraftHooks;
 import com.jcoy0907.peripheralsplusplus.hooks.ComputerCraftNotFoundException;
@@ -133,7 +132,6 @@ public class PeripheralsPlusPlus {
 		if (Config.enableVillagers)
 			proxy.setupVillagers();
 		EntityRegistry.registerModEntity(EntityRidableTurtle.class, "Ridable Turtle", 1, instance, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityNanoBotSwarm.class, "NanoBotSwarm", 2, instance, 64, 20, true);
 
 		ForgeChunkManager.setForcedChunkLoadingCallback(PeripheralsPlusPlus.instance, new PeripheralChunkLoader.LoaderHandler());
 	}

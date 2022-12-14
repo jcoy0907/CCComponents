@@ -4,19 +4,9 @@ import com.austinv11.collectiveframework.minecraft.utils.IconManager;
 import com.jcoy0907.peripheralsplusplus.PeripheralsPlusPlus;
 import com.jcoy0907.peripheralsplusplus.client.gui.GuiSmartHelmetOverlay;
 import com.jcoy0907.peripheralsplusplus.client.models.*;
-import com.jcoy0907.peripheralsplusplus.client.models.*;
-import com.jcoy0907.peripheralsplusplus.entities.EntityNanoBotSwarm;
 import com.jcoy0907.peripheralsplusplus.entities.EntityRidableTurtle;
 import com.jcoy0907.peripheralsplusplus.event.handler.SmartHelmetHandler;
 import com.jcoy0907.peripheralsplusplus.init.ModBlocks;
-import com.jcoy0907.peripheralsplusplus.reference.Reference;
-import com.jcoy0907.peripheralsplusplus.tiles.TileEntityAntenna;
-import com.jcoy0907.peripheralsplusplus.tiles.TileEntityTurtle;
-import com.jcoy0907.peripheralsplusplus.turtles.TurtleCompass;
-import com.jcoy0907.peripheralsplusplus.client.gui.GuiSmartHelmetOverlay;
-import com.jcoy0907.peripheralsplusplus.entities.EntityNanoBotSwarm;
-import com.jcoy0907.peripheralsplusplus.entities.EntityRidableTurtle;
-import com.jcoy0907.peripheralsplusplus.event.handler.SmartHelmetHandler;
 import com.jcoy0907.peripheralsplusplus.reference.Reference;
 import com.jcoy0907.peripheralsplusplus.tiles.TileEntityAntenna;
 import com.jcoy0907.peripheralsplusplus.tiles.TileEntityTurtle;
@@ -56,7 +46,6 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTurtle.class, new RenderTurtle());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ModBlocks.turtle), new ItemRenderAntenna(new RenderTurtle(), new TileEntityTurtle()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityRidableTurtle.class, new RenderRidableTurtle());
-		RenderingRegistry.registerEntityRenderingHandler(EntityNanoBotSwarm.class, new RenderNanoSwarm());
 	}
 
 	@SideOnly(Side.CLIENT)

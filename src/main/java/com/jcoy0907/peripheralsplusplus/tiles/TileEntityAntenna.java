@@ -88,8 +88,6 @@ public class TileEntityAntenna extends MountedTileEntity {
 	public Object[] callMethod(IComputerAccess computer, ILuaContext context, int method, Object[] arguments) throws LuaException, InterruptedException {
 		if (!Config.enableSmartHelmet && method < 5)
 			throw new LuaException("Smart Helmets have been disabled");
-		else if (!Config.enableNanoBots)
-			throw new LuaException("Nano bots have been disabled");
 //		try {
 		switch (method) {
 			case 0://getPlayers

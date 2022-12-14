@@ -127,15 +127,6 @@ public class Config {
 	@Description(category = "Ridable Turtle", comment = "The amount of fuel used after each turtle movement")
 	public static int fuelPerTurtleMovement = 1;
 	
-	@Description(category = "Nano Bots", comment = ENABLE_CONFIG_MESSAGE)
-	public static boolean enableNanoBots = true;
-	
-	@Description(category = "Nano Bots", comment = "The amount of instructions allowed per nano swarm used on an entity, negative denotes infinite")
-	public static int numberOfInstructions = 8;
-	
-	@Description(category = "Nano Bots", comment = "The amount of seconds before a key is 'released', negative denotes infinite")
-	public static double secondsBeforeReversal = 5.0;
-	
 	@Description(category = "Flinging Turtle", comment = ENABLE_CONFIG_MESSAGE)
 	public static boolean enableFlingingTurtle = true;
 
