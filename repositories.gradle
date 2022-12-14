@@ -1,5 +1,12 @@
 // Add any additional repositories for your dependencies here
 
 repositories {
-
+    maven {
+        url  "https://jcenter.bintray.com"
+    }
+    maven {
+        name = "chickenbones"
+        url = "https://nexus.covers1624.net/repository/maven-hosted/"
+        artifactUrls('https://maven.cil.li/')
+    }
 }

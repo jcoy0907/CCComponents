@@ -2,15 +2,19 @@
     {
       "modid": "${modId}",
       "name": "${modName}",
-      "description": "An example mod for Minecraft 1.7.10 with Forge focussed on a stable setup.",
+      "description": "A psuedo-port of MiscPeripherals",
       "version": "${modVersion}",
       "mcversion": "${minecraftVersion}",
-      "url": "https://github.com/SinTh0r4s/MyMod",
+      "url": "jcoy0907.github.io",
       "updateUrl": "",
-      "authorList": ["SinTho0r4s"],
-      "credits": "",
+      "authorList": ["jcoy0907", "austinv11"],
+      "credits": "Made by austinv11, some ideas were taken from RichardG, Updated by jcoy0907",
       "logoFile": "",
       "screenshots": [],
-      "dependencies": []
+	  "parent": "",
+	  "requiredMods": ["Forge","ComputerCraft"],
+      "dependencies": [],
+	  "dependants": [],
+	  "useDependencyInformation": false
     }
 ]
