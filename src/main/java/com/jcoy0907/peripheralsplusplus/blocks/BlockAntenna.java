@@ -2,7 +2,6 @@ package com.jcoy0907.peripheralsplusplus.blocks;
 
 import com.austinv11.collectiveframework.minecraft.utils.Colors;
 import com.austinv11.collectiveframework.minecraft.utils.NBTHelper;
-import com.jcoy0907.peripheralsplusplus.items.ItemNanoSwarm;
 import com.jcoy0907.peripheralsplusplus.items.ItemSmartHelmet;
 import com.jcoy0907.peripheralsplusplus.reference.Reference;
 import com.jcoy0907.peripheralsplusplus.tiles.TileEntityAntenna;
@@ -66,8 +65,7 @@ public class BlockAntenna extends BlockPPP implements ITileEntityProvider {
 
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ) {
-		if (player.getCurrentEquippedItem() == null || !((player.getCurrentEquippedItem().getItem() instanceof ItemSmartHelmet) 
-				|| (player.getCurrentEquippedItem().getItem() instanceof ItemNanoSwarm)))
+		if (player.getCurrentEquippedItem() == null || !((player.getCurrentEquippedItem().getItem() instanceof ItemSmartHelmet)))
 			return false;
 		if (!world.isRemote) {
 			TileEntityAntenna antenna = (TileEntityAntenna) world.getTileEntity(x,y,z);

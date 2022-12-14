@@ -7,7 +7,6 @@ import com.jcoy0907.peripheralsplusplus.client.models.*;
 import com.jcoy0907.peripheralsplusplus.client.models.*;
 import com.jcoy0907.peripheralsplusplus.entities.EntityNanoBotSwarm;
 import com.jcoy0907.peripheralsplusplus.entities.EntityRidableTurtle;
-import com.jcoy0907.peripheralsplusplus.event.handler.RobotHandler;
 import com.jcoy0907.peripheralsplusplus.event.handler.SmartHelmetHandler;
 import com.jcoy0907.peripheralsplusplus.init.ModBlocks;
 import com.jcoy0907.peripheralsplusplus.reference.Reference;
@@ -17,7 +16,6 @@ import com.jcoy0907.peripheralsplusplus.turtles.TurtleCompass;
 import com.jcoy0907.peripheralsplusplus.client.gui.GuiSmartHelmetOverlay;
 import com.jcoy0907.peripheralsplusplus.entities.EntityNanoBotSwarm;
 import com.jcoy0907.peripheralsplusplus.entities.EntityRidableTurtle;
-import com.jcoy0907.peripheralsplusplus.event.handler.RobotHandler;
 import com.jcoy0907.peripheralsplusplus.event.handler.SmartHelmetHandler;
 import com.jcoy0907.peripheralsplusplus.reference.Reference;
 import com.jcoy0907.peripheralsplusplus.tiles.TileEntityAntenna;
@@ -73,6 +71,5 @@ public class ClientProxy extends CommonProxy {
 		super.registerEvents();
 		FMLCommonHandler.instance().bus().register(new SmartHelmetHandler());
 		MinecraftForge.EVENT_BUS.register(new SmartHelmetHandler());
-		FMLCommonHandler.instance().bus().register(new RobotHandler());
 	}
 }

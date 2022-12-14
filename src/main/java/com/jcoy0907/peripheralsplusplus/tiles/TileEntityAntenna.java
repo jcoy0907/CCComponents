@@ -3,7 +3,6 @@ package com.jcoy0907.peripheralsplusplus.tiles;
 import com.austinv11.collectiveframework.minecraft.utils.NBTHelper;
 import com.jcoy0907.peripheralsplusplus.PeripheralsPlusPlus;
 import com.jcoy0907.peripheralsplusplus.items.ItemSmartHelmet;
-import com.jcoy0907.peripheralsplusplus.lua.LuaObjectEntityControl;
 import com.jcoy0907.peripheralsplusplus.lua.LuaObjectHUD;
 import com.jcoy0907.peripheralsplusplus.network.ScaleRequestPacket;
 import com.jcoy0907.peripheralsplusplus.reference.Config;
@@ -87,7 +86,7 @@ public class TileEntityAntenna extends MountedTileEntity {
 
 	@Override
 	public Object[] callMethod(IComputerAccess computer, ILuaContext context, int method, Object[] arguments) throws LuaException, InterruptedException {
-		if (!Config.enableSmartHelmet && method < 6)
+		if (!Config.enableSmartHelmet && method < 5)
 			throw new LuaException("Smart Helmets have been disabled");
 		else if (!Config.enableNanoBots)
 			throw new LuaException("Nano bots have been disabled");
@@ -133,16 +132,6 @@ public class TileEntityAntenna extends MountedTileEntity {
 					entities.put(i + 1, associatedEntities.get(i).getEntityId());
 				}
 				return new Object[]{entities};
-			case 5:
-				if (arguments.length < 1)
-					throw new LuaException("Too few arguments");
-				if (!(arguments[0] instanceof Double))
-					throw new LuaException("Bad argument #1 (expected number)");
-				Entity ent = entityFromId((int)(double)(Double)arguments[0]);
-				if (ent != null)
-					return new Object[]{new LuaObjectEntityControl(identifier, ent)};
-				else
-					throw new LuaException("Entity with id "+arguments[0]+" not found");
 		}
 //		}catch (Exception e) {
 //			e.printStackTrace();

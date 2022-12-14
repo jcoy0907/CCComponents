@@ -15,7 +15,6 @@ import com.jcoy0907.peripheralsplusplus.hooks.ComputerCraftRegistry;
 import com.jcoy0907.peripheralsplusplus.init.ModBlocks;
 import com.jcoy0907.peripheralsplusplus.init.ModItems;
 import com.jcoy0907.peripheralsplusplus.init.Recipes;
-import com.jcoy0907.peripheralsplusplus.items.ItemNanoSwarm;
 import com.jcoy0907.peripheralsplusplus.mount.DynamicMount;
 import com.jcoy0907.peripheralsplusplus.network.*;
 import com.jcoy0907.peripheralsplusplus.pocket.PocketMotionDetector;
@@ -25,26 +24,6 @@ import com.jcoy0907.peripheralsplusplus.reference.Config;
 import com.jcoy0907.peripheralsplusplus.reference.Reference;
 import com.jcoy0907.peripheralsplusplus.turtles.*;
 import com.jcoy0907.peripheralsplusplus.turtles.peripherals.PeripheralChunkLoader;
-import com.jcoy0907.peripheralsplusplus.utils.IPlusPlusPeripheral;
-import com.jcoy0907.peripheralsplusplus.client.gui.GuiHandler;
-import com.jcoy0907.peripheralsplusplus.creativetab.CreativeTabPPP;
-import com.jcoy0907.peripheralsplusplus.entities.EntityNanoBotSwarm;
-import com.jcoy0907.peripheralsplusplus.entities.EntityRidableTurtle;
-import com.jcoy0907.peripheralsplusplus.hooks.ComputerCraftHooks;
-import com.jcoy0907.peripheralsplusplus.hooks.ComputerCraftNotFoundException;
-import com.jcoy0907.peripheralsplusplus.hooks.ComputerCraftRegistry;
-import com.jcoy0907.peripheralsplusplus.init.ModBlocks;
-import com.jcoy0907.peripheralsplusplus.init.ModItems;
-import com.jcoy0907.peripheralsplusplus.init.Recipes;
-import com.jcoy0907.peripheralsplusplus.items.ItemNanoSwarm;
-import com.jcoy0907.peripheralsplusplus.mount.DynamicMount;
-import com.jcoy0907.peripheralsplusplus.network.*;
-import com.jcoy0907.peripheralsplusplus.pocket.PocketMotionDetector;
-import com.jcoy0907.peripheralsplusplus.pocket.PocketPeripheralContainer;
-import com.jcoy0907.peripheralsplusplus.proxy.CommonProxy;
-import com.jcoy0907.peripheralsplusplus.reference.Config;
-import com.jcoy0907.peripheralsplusplus.reference.Reference;
-import com.jcoy0907.peripheralsplusplus.turtles.*;
 import com.jcoy0907.peripheralsplusplus.utils.IPlusPlusPeripheral;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -56,7 +35,6 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.relauncher.Side;
 import dan200.computercraft.api.ComputerCraftAPI;
 import dan200.computercraft.api.turtle.ITurtleUpgrade;
-import net.minecraft.block.BlockDispenser;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -97,7 +75,6 @@ public class PeripheralsPlusPlus {
 		NETWORK.registerMessage(GuiPacket.GuiPacketHandler.class, GuiPacket.class, 10, Side.CLIENT);
 		NETWORK.registerMessage(TextFieldInputEventPacket.TextFieldInputEventPacketHandler.class, TextFieldInputEventPacket.class, 11, Side.SERVER);
 		NETWORK.registerMessage(RidableTurtlePacket.RidableTurtlePacketHandler.class, RidableTurtlePacket.class, 12, Side.SERVER);
-		NETWORK.registerMessage(RobotEventPacket.RobotEventPacketHandler.class, RobotEventPacket.class, 13, Side.CLIENT);
         NETWORK.registerMessage(PermCardChangePacket.PermCardChangePacketHandler.class, PermCardChangePacket.class, 14, Side.SERVER);
 		NETWORK.registerMessage(SynthPacket.SynthPacketHandler.class, SynthPacket.class, 15, Side.CLIENT);
 		NETWORK.registerMessage(SynthResponsePacket.SynthResponsePacketHandler.class, SynthResponsePacket.class, 16, Side.SERVER);
@@ -164,7 +141,6 @@ public class PeripheralsPlusPlus {
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) throws ComputerCraftNotFoundException {
 		Recipes.init();
-		BlockDispenser.dispenseBehaviorRegistry.putObject(ModItems.nanoSwarm, new ItemNanoSwarm.BehaviorNanoSwarm());
 		SimpleRunnable.RESTRICT_THREAD_USAGE = false;
 	}
 	
