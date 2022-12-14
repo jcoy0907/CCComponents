@@ -1,0 +1,20 @@
+package com.jcoy0907.cccomponents.blocks;
+
+import com.jcoy0907.cccomponents.tiles.TileEntityNoteBlock;
+import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
+public class BlockNote extends BlockPPP implements ITileEntityProvider {
+
+	public BlockNote() {
+		super();
+		this.setBlockName("noteBlock");
+	}
+
+	@Override
+	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+		return new TileEntityNoteBlock();
+	}
+
+}
