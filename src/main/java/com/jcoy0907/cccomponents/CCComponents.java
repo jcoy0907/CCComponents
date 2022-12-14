@@ -37,7 +37,7 @@ import dan200.computercraft.api.turtle.ITurtleUpgrade;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.MinecraftForge;
 
-@Mod(modid= Reference.MOD_ID,name = Reference.MOD_NAME,version = Reference.VERSION/*, guiFactory = Reference.GUI_FACTORY_CLASS*/, dependencies = "after:CollectiveFramework")
+@Mod(modid= Reference.MOD_ID,name = Reference.MOD_NAME,version = Reference.VERSION/*, guiFactory = Reference.GUI_FACTORY_CLASS*/, dependencies = "after:CollectiveFramework;after:ComputerCraft")
 public class CCComponents {
 
 	public static int VILLAGER_ID = 1337; //:P
