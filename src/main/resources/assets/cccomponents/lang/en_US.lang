@@ -37,7 +37,7 @@ item.cccomponents:resupplyUpgrade.name=Resupply Upgrade
 item.cccomponents:motionDetector.name=Motion Detector
 
 #Creative Tab
-itemGroup.cccomponents=Peripherals++
+itemGroup.cccomponents=CC Components
 
 #Turtle adjectives
 cccomponents.turtleUpgrade.chatBox=Chatty
@@ -79,12 +79,12 @@ cccomponents.inv.permCard.perms=Permissions:
 cccomponents.chat.launchFailure=You cannot launch the rocket!
 cccomponents.chat.launchStart=T-minus 10 seconds until launch!
 cccomponents.chat.launch=We have liftoff!
-cccomponents.chat.notification=["§6Update for Peripherals++ found! Click for: [",{"text":"Download","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Click this to install the latest version","color":"white"}},"clickEvent":{"action":"run_command","value":"/ppp-update"}},"§6] [",{"text":"Website","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Click this to go to the CurseForge page","color":"white"}},"clickEvent":{"action":"open_url","value":"http://minecraft.curseforge.com/mc-mods/226687-peripherals"}},"§6] §6[",{"text":"Changelog","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Click this to see the changelog","color":"white"}},"clickEvent":{"action":"open_url","value":"https://github.com/austinv11/cccomponents/releases/latest"}},"§6]"]
+cccomponents.chat.notification=["§6Update for CC Components found! Click for: [",{"text":"Download","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Click this to install the latest version","color":"white"}},"clickEvent":{"action":"run_command","value":"/ppp-update"}},"§6] [",{"text":"Website","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Click this to go to the CurseForge page","color":"white"}},"clickEvent":{"action":"open_url","value":"http://minecraft.curseforge.com/mc-mods/226687-peripherals"}},"§6] §6[",{"text":"Changelog","color":"aqua","hoverEvent":{"action":"show_text","value":{"text":"Click this to see the changelog","color":"white"}},"clickEvent":{"action":"open_url","value":"https://github.com/austinv11/cccomponents/releases/latest"}},"§6]"]
 cccomponents.chat.updatedAlready=You already have the latest version!
 cccomponents.chat.stillUpdating=§cThe mod file is still being updated, please be patient
-cccomponents.chat.startUpdate=§6Peripherals++ will now start updating
-cccomponents.chat.updateFailed=§cThere was a problem updating Peripherals++
-cccomponents.chat.updateSucceeded=§6Peripherals++ has been updated! Please restart Minecraft.
+cccomponents.chat.startUpdate=§6CC Components will now start updating
+cccomponents.chat.updateFailed=§cThere was a problem updating CC Components
+cccomponents.chat.updateSucceeded=§6CC Components has been updated! Please restart Minecraft.
 cccomponents.chat.permCard.notSet=This card has not yet been linked to a player and cannot be edited.
 cccomponents.chat.permCard.alreadySet=Already linked.
 cccomponents.chat.permCard.wrongOwner=You do not have permission to edit this card.
