@@ -151,9 +151,6 @@ public class Config {
 	@Description(category = "Motion Detector", comment = ENABLE_CONFIG_MESSAGE)
 	public static boolean enableMotionDetector = true;
 
-    @Description(category = "AI Chat Box", comment = ENABLE_CONFIG_MESSAGE)
-    public static boolean enableAIChatBox = true;
-
     @Description(category = "Player Interface", comment = "If disabled, the peripheral will require no permission cards to function and will be allowed to access all inventories regardless of permissions.")
     public static boolean enableInterfacePermissions = true;
 }

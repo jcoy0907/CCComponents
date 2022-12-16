@@ -107,7 +107,5 @@ public class Recipes {
 		RecipeSorter.register(Reference.MOD_ID.toLowerCase()+":pocketComputerUpgradeRecipe", 
 				PocketComputerCraftingHandler.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
 		GameRegistry.addRecipe(new PocketComputerCraftingHandler());
-        if (Config.enableAIChatBox)
-            GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.aiChatBox), " r ", "cbc", " s ", 'r', new ItemStack(Items.redstone), 'c', new ItemStack(Items.comparator), 'b', new ItemStack(ModBlocks.chatBox), 's', new ItemStack(Items.slime_ball));
 	}
 }

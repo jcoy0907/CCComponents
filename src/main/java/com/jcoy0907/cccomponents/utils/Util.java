@@ -5,6 +5,7 @@ import com.austinv11.collectiveframework.utils.StringUtils;
 import com.jcoy0907.cccomponents.reference.Reference;
 import com.google.common.collect.Multimap;
 import com.google.gson.Gson;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,6 +14,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.nbt.NBTTagString;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.MathHelper;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
@@ -171,5 +173,21 @@ public class Util {
 				list.add(player);
 		}
 		return list;
+	}
+
+	public static int rotationToSide(EntityLivingBase player) {
+		int rot = MathHelper.floor_float(player.rotationYaw / 90.0F + 0.5F) & 3;
+		switch(rot) {
+			case 0:
+				return 2;
+			case 1:
+				return 5;
+			case 2:
+				return 3;
+			case 3:
+				return 4;
+			default:
+				return 2;
+		}
 	}
 }
