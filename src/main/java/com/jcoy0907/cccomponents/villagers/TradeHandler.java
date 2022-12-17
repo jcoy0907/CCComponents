@@ -24,7 +24,7 @@ public class TradeHandler implements VillagerRegistry.IVillageTradeHandler {
 	public void manipulateTradesForVillager(EntityVillager villager, MerchantRecipeList recipeList, Random random) {
 		ItemStack error = new ItemStack(Items.diamond);
 		ItemStack emerald = new ItemStack(Items.emerald);
-		error.setStackDisplayName(Colors.RED+"THIS IS A BUG, REPORT TO THE P++ AUTHOR ASAP");
+		error.setStackDisplayName(Colors.RED+"THIS IS A BUG, REPORT TO THE CCC AUTHOR ASAP");
 		MerchantRecipe recipe = new MerchantRecipe(new ItemStack(Blocks.dirt), error);
 		do {
 			int trade = MathHelper.getRandomIntegerInRange(random, 0, 7);
