@@ -1,6 +1,7 @@
-package com.austinv11.collectiveframework.minecraft.config;
+package com.jcoy0907.collectiveframework.minecraft.config;
 
 import com.austinv11.collectiveframework.minecraft.CollectiveFramework;
+import com.austinv11.collectiveframework.minecraft.config.*;
 import com.austinv11.collectiveframework.minecraft.config.ConfigLoadEvent.Init;
 import com.austinv11.collectiveframework.minecraft.config.ConfigLoadEvent.Pre;
 import com.austinv11.collectiveframework.utils.ArrayUtils;
@@ -21,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import net.minecraftforge.common.MinecraftForge;
+import scala.Console;
 
 public class ConfigRegistry {
     private static List<ConfigRegistry.ConfigProxy> toBeInitialized = new ArrayList();
@@ -384,22 +386,22 @@ public class ConfigRegistry {
                         if (lineCount < 1) {
                             ++lineCount;
                         } else if (lineCount == 1) {
-                            try {
-                                String field = line.substring(line.indexOf(":") + 1, line.indexOf("="));
-                                String key = line.substring(0, line.indexOf(":")).replace("\t", "");
-                                line = line.substring(line.indexOf("=") + 1);
-                                Field f = ReflectionUtils.getDeclaredOrNormalField(field, config.getClass());
-                                if (f != null) {
-                                    try {
-                                        f.setAccessible(true);
-                                        f.set(config, ConfigRegistry.deserialize(key, line));
-                                    } catch (ConfigException var10) {
-                                        var10.printStackTrace();
-                                    }
+                            CollectiveFramework.LOGGER.warn("Trying 1");
+                            String field = line.substring(line.indexOf(":") + 1, line.indexOf("="));
+                            CollectiveFramework.LOGGER.warn("Trying 2");
+                            String key = line.substring(0, line.indexOf(":")).replace("\t", "");
+                            CollectiveFramework.LOGGER.warn("Trying 3");
+                            line = line.substring(line.indexOf("=") + 1);
+                            Field f = ReflectionUtils.getDeclaredOrNormalField(field, config.getClass());
+                            if (f != null) {
+                                try {
+                                    f.setAccessible(true);
+                                    f.set(config, ConfigRegistry.deserialize(key, line));
+                                } catch (ConfigException var10) {
+                                    var10.printStackTrace();
                                 }
-                            } catch (StringIndexOutOfBoundsException e) {
-                                e.printStackTrace();
                             }
+
                             ++lineCount;
                         } else {
                             lineCount = 0;

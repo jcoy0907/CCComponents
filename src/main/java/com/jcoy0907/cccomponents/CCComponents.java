@@ -1,10 +1,10 @@
 package com.jcoy0907.cccomponents;
 
 import com.austinv11.collectiveframework.minecraft.config.ConfigException;
-import com.austinv11.collectiveframework.minecraft.config.ConfigRegistry;
 import com.austinv11.collectiveframework.minecraft.logging.Logger;
 import com.austinv11.collectiveframework.minecraft.reference.ModIds;
 import com.austinv11.collectiveframework.multithreading.SimpleRunnable;
+import com.jcoy0907.collectiveframework.minecraft.config.ConfigRegistry;
 import com.jcoy0907.cccomponents.client.gui.GuiHandler;
 import com.jcoy0907.cccomponents.creativetab.CreativeTabPPP;
 import com.jcoy0907.cccomponents.entities.EntityRidableTurtle;
